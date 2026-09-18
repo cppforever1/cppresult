@@ -1,0 +1,12 @@
+build*/
+.cache/
+
+# CMake and compiler output
+CMakeUserPresets.json
+*.o
+*.obj
+*.out
+
+# VS Code active-file task output
+/result_test
+/tests/result_test
