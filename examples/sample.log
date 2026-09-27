@@ -1,0 +1,122 @@
+# sample log for logstat; generated data, no real hosts
+2026-09-27T10:00:00Z WARN gateway: rate limit applied latency_ms=456.7
+2026-09-27T10:00:01Z INFO queue: job enqueued
+2026-09-27T10:00:02Z ERROR auth: signature mismatch latency_ms=202.1 caller=gateway
+2026-09-27T10:00:03Z ERROR auth: signature mismatch latency_ms=360.6 caller=gateway
+2026-09-27T10:00:04Z INFO auth: token expired latency_ms=1.6 caller=gateway
+2026-09-27T10:00:05Z INFO gateway: forwarded request latency_ms=392.1
+2026-09-27T10:00:06Z WARN cache: hit
+2026-09-27T10:00:07Z INFO queue: job completed
+2026-09-27T10:00:08Z INFO cache: miss
+2026-09-27T10:00:09Z WARN db: slow query latency_ms=306.2
+2026-09-27T10:00:10Z ERROR gateway: upstream timeout latency_ms=140.5
+2026-09-27T10:00:11Z ERROR cache: hit
+2026-09-27T10:00:12Z INFO db: query executed latency_ms=174.8 caller=http
+2026-09-27T10:00:13Z WARN cache: eviction
+2026-09-27T10:00:14Z DEBUG cache: hit
+2026-09-27T10:00:15Z ERROR auth: signature mismatch latency_ms=191.4 caller=gateway
+2026-09-27T10:00:16Z DEBUG auth: token expired latency_ms=270.9 caller=gateway
+2026-09-27T10:00:17Z WARN cache: eviction
+2026-09-27T10:00:18Z ERROR gateway: upstream timeout latency_ms=367.7
+2026-09-27T10:00:19Z ERROR gateway: upstream timeout latency_ms=425.7
+2026-09-27T10:00:20Z ERROR gateway: upstream timeout latency_ms=225.8
+2026-09-27T10:00:21Z INFO cache: hit
+2026-09-27T10:00:22Z DEBUG queue: job retried
+2026-09-27T10:00:23Z WARN queue: job completed
+2026-09-27T10:00:24Z ERROR db: connection reset latency_ms=321.6 caller=http
+2026-09-27T10:00:25Z WARN queue: job retried
+2026-09-27T10:00:26Z INFO cache: miss
+2026-09-27T10:00:27Z INFO db: slow query latency_ms=16.3 caller=http
+2026-09-27T10:00:28Z WARN auth: token expired latency_ms=445.0 caller=gateway
+2026-09-27T10:00:29Z INFO db: query executed latency_ms=332.6 caller=http
+2026-09-27T10:00:30Z WARN cache: miss
+2026-09-27T10:00:31Z INFO queue: job enqueued
+2026-09-27T10:00:32Z INFO db: slow query latency_ms=210.7
+2026-09-27T10:00:33Z DEBUG auth: token expired latency_ms=442.6 caller=gateway
+2026-09-27T10:00:34Z WARN http: bad request rejected latency_ms=451.3 caller=gateway
+2026-09-27T10:00:35Z WARN queue: job completed
+2026-09-27T10:00:36Z INFO db: query executed latency_ms=358.9 caller=http
+2026-09-27T10:00:37Z INFO cache: hit
+2026-09-27T10:00:38Z ERROR gateway: rate limit applied latency_ms=262.5
+this line is malformed on purpose
+2026-09-27T10:00:39Z ERROR gateway: upstream timeout latency_ms=119.3
+2026-09-27T10:00:40Z WARN auth: token validated latency_ms=459.1 caller=gateway
+2026-09-27T10:00:41Z INFO queue: job retried
+2026-09-27T10:00:42Z INFO http: request served latency_ms=319.1 caller=gateway
+2026-09-27T10:00:43Z INFO auth: token expired latency_ms=262.2 caller=gateway
+2026-09-27T10:00:44Z INFO cache: eviction
+2026-09-27T10:00:45Z ERROR auth: signature mismatch latency_ms=139.8 caller=gateway
+2026-09-27T10:00:46Z INFO cache: eviction
+2026-09-27T10:00:47Z WARN http: request served latency_ms=198.0 caller=gateway
+2026-09-27T10:00:48Z DEBUG http: request served latency_ms=7.2 caller=gateway
+2026-09-27T10:00:49Z INFO gateway: rate limit applied latency_ms=25.0
+2026-09-27T10:00:50Z ERROR db: connection reset latency_ms=448.6
+2026-09-27T10:00:51Z ERROR gateway: upstream timeout latency_ms=157.6
+2026-09-27T10:00:52Z INFO db: slow query latency_ms=438.7 caller=http
+2026-09-27T10:00:53Z INFO cache: eviction
+2026-09-27T10:00:54Z DEBUG http: request served latency_ms=299.4 caller=gateway
+2026-09-27T10:00:55Z INFO cache: eviction
+2026-09-27T10:00:56Z INFO queue: job retried
+2026-09-27T10:00:57Z INFO auth: token expired latency_ms=94.2 caller=gateway
+2026-09-27T10:00:58Z WARN http: request served latency_ms=446.9 caller=gateway
+2026-09-27T10:00:59Z INFO gateway: rate limit applied latency_ms=232.5
+2026-09-27T10:01:00Z INFO queue: job enqueued
+2026-09-27T10:01:01Z INFO queue: job retried
+2026-09-27T10:01:02Z INFO auth: token validated latency_ms=317.5 caller=gateway
+2026-09-27T10:01:03Z INFO http: bad request rejected latency_ms=204.4 caller=gateway
+2026-09-27T10:01:04Z DEBUG cache: hit
+2026-09-27T10:01:05Z INFO db: query executed latency_ms=84.2 caller=http
+2026-09-27T10:01:06Z DEBUG cache: miss
+2026-09-27T10:01:07Z WARN http: request served latency_ms=231.6 caller=gateway
+2026-09-27T10:01:08Z ERROR gateway: upstream timeout latency_ms=382.5
+2026-09-27T10:01:09Z INFO gateway: forwarded request latency_ms=2.8
+2026-09-27T10:01:10Z INFO gateway: rate limit applied latency_ms=196.1
+2026-09-27T10:01:11Z INFO queue: job enqueued
+2026-09-27T10:01:12Z INFO db: query executed latency_ms=269.9 caller=http
+2026-09-27T10:01:13Z INFO auth: token validated latency_ms=298.1 caller=gateway
+2026-09-27T10:01:14Z ERROR db: connection reset latency_ms=351.0 caller=http
+2026-09-27T10:01:15Z WARN auth: token expired latency_ms=64.0 caller=gateway
+2026-09-27T10:01:16Z DEBUG db: query executed latency_ms=82.5 caller=http
+2026-09-27T10:01:17Z FATAL db: primary unavailable latency_ms=310.2 caller=http
+2026-09-27T10:01:18Z ERROR db: slow query latency_ms=402.0 caller=http
+2026-09-27T10:01:19Z INFO db: query executed latency_ms=123.2 caller=http
+2026-09-27T10:01:20Z INFO db: slow query latency_ms=27.9 caller=http
+2026-09-27T10:01:21Z INFO db: query executed latency_ms=329.3 caller=http
+2026-09-27T10:01:22Z DEBUG db: slow query latency_ms=291.6 caller=http
+2026-09-27T10:01:23Z DEBUG auth: token validated latency_ms=152.0 caller=gateway
+2026-09-27T10:01:24Z DEBUG http: bad request rejected latency_ms=470.0 caller=gateway
+2026-09-27T10:01:25Z ERROR gateway: upstream timeout latency_ms=413.5
+2026-09-27T10:01:26Z DEBUG queue: job completed
+2026-09-27T10:01:27Z INFO db: slow query latency_ms=353.1 caller=http
+2026-09-27T10:01:28Z INFO gateway: rate limit applied latency_ms=139.3
+2026-09-27T10:01:29Z DEBUG gateway: rate limit applied latency_ms=153.3
+2026-09-27T10:01:30Z ERROR gateway: upstream timeout latency_ms=95.1
+2026-09-27T10:01:31Z ERROR gateway: upstream timeout latency_ms=78.2
+2026-09-27T10:01:32Z INFO gateway: forwarded request latency_ms=60.7
+2026-09-27T10:01:33Z ERROR db: connection reset latency_ms=14.2 caller=http
+2026-09-27T10:01:34Z DEBUG db: slow query latency_ms=181.3
+2026-09-27T10:01:35Z INFO queue: job enqueued
+2026-09-27T10:01:36Z WARN http: request served latency_ms=328.3 caller=gateway
+2026-09-27T10:01:37Z INFO cache: miss
+2026-09-27T10:01:38Z INFO http: request served latency_ms=133.2 caller=gateway
+2026-09-27T10:01:39Z INFO cache: miss
+2026-09-27T10:01:40Z ERROR db: query executed latency_ms=43.3 caller=http
+2026-09-27T10:01:41Z ERROR gateway: upstream timeout latency_ms=393.6
+2026-09-27T10:01:42Z ERROR db: connection reset latency_ms=362.3 caller=http
+2026-09-27T10:01:43Z INFO queue: job enqueued
+2026-09-27T10:01:44Z INFO cache: hit
+2026-09-27T10:01:45Z INFO queue: job retried
+2026-09-27T10:01:46Z INFO queue: job completed
+2026-09-27T10:01:47Z INFO http: request served latency_ms=413.4 caller=gateway
+2026-09-27T10:01:48Z DEBUG db: slow query latency_ms=305.9 caller=http
+2026-09-27T10:01:49Z ERROR cache: eviction
+2026-09-27T10:01:50Z INFO db: query executed latency_ms=301.6 caller=http
+2026-09-27T10:01:51Z WARN gateway: rate limit applied latency_ms=337.2
+2026-09-27T10:01:52Z ERROR gateway: upstream timeout latency_ms=40.8
+2026-09-27T10:01:53Z ERROR db: connection reset latency_ms=66.6
+2026-09-27T10:01:54Z ERROR gateway: upstream timeout latency_ms=408.0
+2026-09-27T10:01:55Z INFO queue: job retried
+2026-09-27T10:01:56Z DEBUG auth: token validated latency_ms=182.9 caller=gateway
+2026-09-27T10:01:57Z ERROR auth: signature mismatch latency_ms=463.3 caller=gateway
+2026-09-27T10:01:58Z INFO gateway: forwarded request latency_ms=351.7
+2026-09-27T10:01:59Z ERROR db: connection reset latency_ms=149.3

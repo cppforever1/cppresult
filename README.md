@@ -112,3 +112,24 @@ cmake --install build --prefix build/stage
 
 In VS Code, open `tests/result_test.cpp` and run the `C/C++: g++ build active file`
 task to build a debugger-friendly standalone test binary.
+
+## Example application: logstat
+
+`logstat` is a small multi-threaded log analysis CLI built on `cppresult`. It
+parses structured log lines, aggregates level counts, latency percentiles, top
+messages and per-component statistics, and prints a text, JSON, CSV or TSV report.
+It exists to exercise the result type in a realistic program with file IO,
+threading, configuration parsing and output formatting.
+
+```sh
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+cmake --build build
+./build/logstat --format json --threads 4 --top 5 examples/sample.log
+./build/logstat --title "Nightly summary" --percentile 99 --fail-on-errors examples/sample.log
+```
+
+Input lines have the form
+`2026-09-27T10:00:00Z INFO http: request served latency_ms=12.5 caller=gateway`.
+Run `logstat --help` for all options; `--config file.ini` reads `key = value`
+defaults. Disable the CLI with `-DCPPRESULT_BUILD_LOGSTAT=OFF`. Its tests live in
+`tests/logstat_test.cpp` and run through `ctest` with the library tests.

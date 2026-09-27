@@ -40,10 +40,40 @@ install(FILES
 )
 
 option(CPPRESULT_BUILD_TESTS "Build cppresult tests" ON)
+option(CPPRESULT_BUILD_LOGSTAT "Build the logstat example CLI" ON)
+
+if(CPPRESULT_BUILD_LOGSTAT)
+    find_package(Threads REQUIRED)
+
+    add_library(logstat_core STATIC
+        src/string_utils.cpp
+        src/line_parser.cpp
+        src/stats.cpp
+        src/file_reader.cpp
+        src/worker_pool.cpp
+        src/report.cpp
+        src/config.cpp
+        src/cli.cpp
+    )
+    target_compile_features(logstat_core PUBLIC cxx_std_20)
+    target_include_directories(logstat_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+    target_link_libraries(logstat_core PUBLIC cppresult Threads::Threads)
+
+    add_executable(logstat src/main.cpp)
+    target_link_libraries(logstat PRIVATE logstat_core)
+endif()
 
 if(CPPRESULT_BUILD_TESTS)
     enable_testing()
     add_executable(cppresult_tests tests/result_test.cpp)
     target_link_libraries(cppresult_tests PRIVATE cppresult)
     add_test(NAME cppresult_tests COMMAND cppresult_tests)
+
+    if(CPPRESULT_BUILD_LOGSTAT)
+        add_executable(logstat_tests tests/logstat_test.cpp)
+        target_link_libraries(logstat_tests PRIVATE logstat_core)
+        add_test(NAME logstat_tests COMMAND logstat_tests)
+        add_test(NAME logstat_sample
+            COMMAND logstat --format json --threads 2 ${CMAKE_CURRENT_SOURCE_DIR}/examples/sample.log)
+    endif()
 endif()
